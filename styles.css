@@ -1,0 +1,255 @@
+body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, #4a0000, #800000);
+    color: #fff8e7;
+    margin: 8;
+    padding: 0;
+    line-height: 1.6;
+    position: relative;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgb(192, 145, 6), rgba(0, 0, 0, 0) 70%);
+    background-size: 300px 300px;
+    animation: twinkle 5s infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+main {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border: 3px solid #ffd700;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(255, 215, 0, 0.5);
+    z-index: 1;
+    position: relative;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #ffd700;
+    text-shadow: 2px 2px 5px #b30000;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+subsection1 img, subsection2 img, subsection3 img, subsection4 img, subsection5 img, subsection6 img {
+    width: 300px;
+    height: 200px;
+    border: 5px solid #ffd700;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+subsection1 img:hover, subsection2 img:hover, subsection3 img:hover, subsection4 img:hover, subsection5 img:hover, subsection6 img:hover {
+    transform: scale(1.5);
+    box-shadow: 0 16px 32px rgba(255, 223, 127, 0.9), 0 0 30px #ffd700;
+    z-index: 10;
+}
+
+img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border: 5px solid #ffd700;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 6px rgba(255, 215, 0, 0.5);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+fieldset {
+    border: 2px solid #0a0a0a;
+    background-color: rgba(76, 26, 26, 0.8);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+fieldset legend {
+    background-color: #c19a5b;
+    color: #4c1a1a;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+form input[type="text"], form input[type="email"], form input[type="file"], form textarea, form select {
+    width: 80%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #c19a5b;
+    border-radius: 5px;
+    background-color: #f8f1e7;
+    color: #4c1a1a;
+    font-size: 16px;
+}
+
+form input[type="submit"] {
+    background-color: #c19a5b;
+    color: #4c1a1a;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #b31111;
+    transform: scale(1.05);
+}
+
+form {
+    background: linear-gradient(145deg, #4c1a1a, #f0d28a);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    color: #ffffff;
+    font-family: "Georgia", serif;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+#rama-photos h1 {
+    font-size: 2em;
+    color: #fff;
+}
+
+#bookstore {
+    background-color: rgba(63, 3, 3, 0.9);
+    border-radius: 15px;
+    padding: 20px;
+    display:inline-block;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(255, 215, 0, 0.6);
+    margin:20px auto; 
+}
+#bookstore h1 {
+    font-size: 2em;
+    color: #ffd700;
+    text-shadow: 2px 2px 5px #b30000;
+}
+
+.book {
+    display: inline-block;
+    width: 45%;
+    margin: 30px 2.5%;
+    background-color: rgba(76, 26, 26, 0.8);
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(255, 215, 0, 0.4);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+    border: 3px solid #ffd700;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.book:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 215, 0, 0.8);
+}
+
+.add-to-cart {
+    background-color: #ffd700;
+    color: #4c1a1a;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #b30000;
+    color: #ffd700;
+}
+
+/* Cart Section Styling */
+#cart {
+    background-color: rgba(76, 26, 26, 0.8);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(255, 215, 0, 0.6);
+}
+
+#cart h2 {
+    font-size: 2em;
+    color: #ffd700;
+    text-align: center;
+}
+
+#cart-items {
+    list-style-type: none;
+    padding: 0;
+}
+
+#cart-items li {
+    margin: 10px 0;
+    color: #fff;
+}
+
+#total-price {
+    font-weight: bold;
+}
+
+#checkout-button {
+    background-color: #ffd700;
+    color: #4c1a1a;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#checkout-button:hover {
+    background-color: #b30000;
+    color: #ffd700;
+}
+
+hr {
+    border: 0;
+    height: 2px;
+    background: linear-gradient(to right, #ffd700, #ff4500);
+    margin: 40px 0;
+}
+
+#rama-photos {
+    margin-bottom: 60px;
+}
+
+#bookstore {
+    margin-top: 60px;
+}

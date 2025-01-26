@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Lord Rama's Gallery</title>
+        <link rel="stylesheet" href="styles.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <main>
+            <h1>Lord Rama's Gallery</h1>
+            <section1 id="rama-photos">
+                <h1>Rama Photos</h1>
+                <subsection1>
+                    <h2>Bala Kanda</h2>
+                    <img src="https://kausiki.com/wp-content/uploads/2021/06/07841e76-ramayana-1.png" alt="Rama in Sita Swayamvar">
+                </subsection1>
+                <subsection2>
+                    <h2>Ayodhya Kanda</h2>
+                    <img src="https://ramabhaktisamrajyam.in/wp-content/uploads/2021/05/ram-leaving-ayodhya1.jpg" alt="Rama leaving for exile">
+                </subsection2>
+                <subsection3>
+                    <h2>Aranya Kanda</h2>
+                    <img src="https://greatertelugu.org/wp-content/uploads/2020/10/aranya-kanda-589x300.jpg" alt="Lord Rama Mother Sita and Laksman in Panchavati">
+                </subsection3>
+                <subsection4>
+                    <h2> Kishkindha Kanda</h2>
+                    <img src="https://kausiki.com/wp-content/uploads/2021/12/98a0c490-ramayana-4-kishkinda-416x582.jpg" alt="Rama makes friendship with Sugriva, Hanuma meets Rama">
+                </subsection4>
+                <subsection5>
+                    <h2>Sundara Kanda</h2>
+                    <img src="https://www.csp.indica.in/wp-content/uploads/2020/03/sundara-k.jpg" alt="Hanuma Finds Mother Sita">
+                </subsection5>
+                <subsection6>
+                    <h2>Yudha Kanda</h2>
+                    <img src="https://www.vyasaonline.com/wp-content/uploads/2017/11/ramayana-yuddha-kanda-1.jpg" alt="Ravan is Killed">
+                </subsection6> 
+            </section1>
+            <section2>
+                <h1>Read Ramayana by:</h1>
+                <h2>Ramayana for Adults:</h2>
+                
+                <ul>
+                    <li>Srimad Valmiki Ramayana by Valmiki</li>
+                    <figure>
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgmh9gPGFCIq1s6zLKBQDGN7M6wYZxpfEOKJdAwCDUE1tIeqaCvn55PU_PaVJMQmEw1chIhkMhd9gC9fEnJ1wqXMDcxFn55vmzhSWR0sWQSLG86vKTZfgQX2aNvW4aaszq95gNjBfcqzBE4/s1600/valmiki-wallpaper-1200x800.jpg" alt="Valmiki Ramayan">
+                        <figcaption>Valmiki <em>wrote</em> Ramayana</figcaption>
+                    </figure>
+                    <li>RamCharitaManas by Tulsi Das</li>
+                    
+                </ul>
+                <h2>Ramayana for kids</h2>
+                <ol>
+                    <li>Ramayana by Amar Chitra Katha</li>
+                    <li>The Children's Ramayana</li>
+                    <li>Ramayana in Pictures</li>
+                </ol>
+            </section2>
+            <section3>
+                <h1>How much do you know about Ramayana?</h1>
+                <form action="form.php" method="post" enctype="multipart/form-data">
+                    <fieldset>
+                        <legend>1. Who wrote the Ramayana?</legend>
+                        <label><input type="radio" name="q1" value="valmiki"> Valmiki</label><br>
+                        <label><input type="radio" name="q1" value="tulsidas"> Tulsidas</label><br>
+                        <label><input type="radio" name="q1" value="vedavyasa"> Vedavyasa</label><br>
+                    </fieldset>
+                    <br>
+            
+                    <fieldset>
+                        <legend>2. Which of these are names of Lord Rama?</legend>
+                        <label><input type="checkbox" name="q2[]" value="ramachandra"> Ramachandra</label><br>
+                        <label><input type="checkbox" name="q2[]" value="janaki"> Janaki</label><br>
+                        <label><input type="checkbox" name="q2[]" value="raghunatha"> Raghunatha</label><br>
+                    </fieldset>
+                    <br>
+            
+                    <label for="q3">3. Which kanda of the Ramayana describes the building of the bridge to Lanka?</label><br>
+                    <select name="q3" id="q3">
+                        <option value="bala">Bala Kanda</option>
+                        <option value="ayodhya">Ayodhya Kanda</option>
+                        <option value="kishkindha">Kishkindha Kanda</option>
+                        <option value="sundara">Sundara Kanda</option>
+                    </select>
+                    <br><br>
+            
+                    <label for="q4">4. Name the river where Lord Rama met Guha:</label><br>
+                    <input type="text" id="q4" name="q4" placeholder="Enter the river name"><br><br>
+            
+                    <label for="q5">5. When do you usually read or recite the Ramayana?</label><br>
+                    <input type="time" id="q5" name="q5"><br><br>
+            
+                    <label for="q6">6. Upload your favorite image of Ramayana:</label><br>
+                    <input type="file" id="q6" name="q6" accept="image/*"><br><br>
+            
+                    <label for="q7">7. Pick a color that reminds you of Ramayana:</label><br>
+                    <input type="color" id="q7" name="q7"><br><br>
+            
+                    <label for="q8">8. Rate your knowledge of Ramayana (1 to 10):</label><br>
+                    <input type="range" id="q8" name="q8" min="1" max="10" step="1"><br><br>
+            
+                    <label for="q9">9. Who is your favorite character in Ramayana and why?</label><br>
+                    <textarea id="q9" name="q9" placeholder="Share your thoughts..." rows="4" cols="50"></textarea><br><br>
+            
+                    <label for="q10">10. What is the most important lesson you learned from the Ramayana?</label><br>
+                    <textarea id="q10" name="q10" placeholder="Share your thoughts..." rows="4" cols="50"></textarea><br><br>
+            
+                    <fieldset>
+                        <legend>11. Arrange the following events in the correct order:</legend>
+                        <p>Enter the order of events by ranking them with numbers (1 being the first event):</p>
+                        <ol>
+                            <li>
+                                Rama breaks Shiva's bow 
+                                <input type="number" name="event1" min="1" max="4" placeholder="Rank">
+                            </li>
+                            <li>
+                                Vali is killed 
+                                <input type="number" name="event2" min="1" max="4" placeholder="Rank">
+                            </li>
+                            <li>
+                                Ram Setu is built 
+                                <input type="number" name="event3" min="1" max="4" placeholder="Rank">
+                            </li>
+                            <li>
+                                Lanka is set on fire 
+                                <input type="number" name="event4" min="1" max="4" placeholder="Rank">
+                            </li>
+                        </ol>
+                    </fieldset>
+                    <br>
+            
+                    <fieldset>
+                        <legend>12. Would you recommend Ramayana as a life guide?</legend>
+                        <label><input type="radio" name="survey" value="yes"> Yes</label><br>
+                        <label><input type="radio" name="survey" value="no"> No</label><br>
+                        <label><input type="radio" name="survey" value="maybe"> Maybe</label><br>
+                    </fieldset>
+                    <br>
+            
+                    <input type="submit" value="Submit Quiz">
+                </form>
+            </section3>
+            <section4 id="bookstore">
+                <h1>Buy Ramayana Books</h1>
+                
+                <div class="book" id="book1">
+                    <h2>Ramayana for Adults - Srimad Valmiki Ramayana</h2>
+                    <img src="https://rukminim1.flixcart.com/image/832/832/xif0q/regionalbooks/h/i/j/srimad-valmiki-ramayana-part-1-2-english-combo-pack-with-original-imaghjy5pghz6gcr.jpeg?q=70" alt="Srimad Valmiki Ramayana">
+                    <p>Age: 18+</p>
+                    <p>Price: $20</p>
+                    <button class="add-to-cart" data-book="book1">Add to Cart</button>
+                </div>
+    
+                <div class="book" id="book2">
+                    <h2>Ramayana for Adults - RamCharitaManas</h2>
+                    <img src="https://www.holybooks.com/wp-content/uploads/Sri-Ram-Charita-Manas-the-Ramayana-of-Goswami-Tulasidas.jpg" alt="RamCharitaManas">
+                    <p>Age: 18+</p>
+                    <p>Price: $15</p>
+                    <button class="add-to-cart" data-book="book2">Add to Cart</button>
+                </div>
+    
+                <div class="book" id="book3">
+                    <h2>Ramayana for Kids - Amar Chitra Katha</h2>
+                    <img src="https://comicvine.gamespot.com/a/uploads/scale_large/0/77/2346268-61vz_m0dhdl.jpg" alt="Amar Chitra Katha">
+                    <p>Age: 9+</p>
+                    <p>Price: $10</p>
+                    <button class="add-to-cart" data-book="book3">Add to Cart</button>
+                </div>
+    
+                <div class="book" id="book4">
+                    <h2>Ramayana for Kids - Ramayana in Pictures</h2>
+                    <img src="https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https://substack-post-media.s3.amazonaws.com/public/images/0327ddab-62a6-4a53-9353-edb3a01fc2c0_2967x3027.jpeg" alt="Ramayana in Pictures">
+                    <p>Age: 5+</p>
+                    <p>Price: $8</p>
+                    <button class="add-to-cart" data-book="book4">Add to Cart</button>
+                </div>
+                
+                <div id="cart">
+                    <h2>Your Cart</h2>
+                    <ul id="cart-items">
+                        <!-- Cart items will be added here -->
+                    </ul>
+                    <p>Total: $<span id="total-price">0</span></p>
+                    <button id="checkout-button">Checkout</button>
+                </div>
+            </section4>
+            <script src="calculate.js"></script>
+        </main>
+        <footer>
+            <p>&copy; 2025 Lord Rama's Gallery</p>
+        </footer>
+    </body>
+</html>
