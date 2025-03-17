@@ -71,6 +71,8 @@
             <section3>
                 <h1>How much do you know about Ramayana?</h1>
                 <form action="form.php" method="post" enctype="multipart/form-data">
+                    <label for="username">What is your name?</label><br>
+                    <input type="text" id="username" name="username" placeholder="Enter your name"><br><br>
                     <fieldset>
                         <legend>1. Who wrote the Ramayana?</legend>
                         <label><input type="radio" name="q1" value="valmiki"> Valmiki</label><br>
@@ -148,8 +150,10 @@
                         <label><input type="radio" name="survey" value="maybe"> Maybe</label><br>
                     </fieldset>
                     <br>
-            
                     <input type="submit" value="Submit Quiz">
+                    <div class="leaderboard-btn-container">
+                        <a href="leaderboard.php" class="leaderboard-btn">View Leaderboard</a>
+                    </div>
                 </form>
             </section3>
             <section4 id="bookstore">

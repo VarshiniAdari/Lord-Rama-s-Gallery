@@ -1,3 +1,80 @@
+<?php
+$servername = "localhost";
+$username = "root"; 
+$password = ""; 
+$dbname = "ramayanaquiz";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Fetch form data
+$username = $_POST['username'];
+$q1 = $_POST['q1'];
+$q2 = isset($_POST['q2']) ? implode(", ", $_POST['q2']) : "";
+$q3 = $_POST['q3'];
+$q4 = $_POST['q4'];
+$q5 = $_POST['q5'];
+$q6 = $_FILES['q6']['name']; 
+$q7 = $_POST['q7'];
+$q8 = $_POST['q8'];
+$q9 = $_POST['q9'];
+$q10 = $_POST['q10'];
+$event1 = $_POST['event1'];
+$event2 = $_POST['event2'];
+$event3 = $_POST['event3'];
+$event4 = $_POST['event4'];
+$survey = $_POST['survey'];
+
+// Upload file
+$target_dir = "uploads/";
+$target_file = $target_dir . basename($_FILES["q6"]["name"]);
+move_uploaded_file($_FILES["q6"]["tmp_name"], $target_file);
+
+// Score Calculation
+$score = 0;
+if (strtolower($q1) === "valmiki") $score += 5;
+$correct_answers = ['Ramachandra', 'Raghunatha'];
+if (!empty($_POST['q2'])) {
+    foreach ($correct_answers as $answer) {
+        if (in_array($answer, $_POST['q2'])) {
+            $score += 5;
+        }
+    }
+}
+if (strtolower(trim($q3)) === 'sundara') $score += 5;
+if (strtolower(trim($q4)) === 'ganga') $score += 5;
+
+$time = strtotime($q5);
+if ($time >= strtotime('05:00') && $time <= strtotime('09:00')) $score += 10;
+elseif ($time >= strtotime('17:00') && $time <= strtotime('20:00')) $score += 5;
+
+$correct_order = [1, 2, 4, 3];
+$submitted_order = [$event1, $event2, $event3, $event4];
+foreach ($submitted_order as $key => $value) {
+    if ($value == $correct_order[$key]) {
+        $score += 5;
+    }
+}
+if ($survey === 'yes') $score += 20;
+elseif ($survey === 'maybe') $score += 10;
+else $score += 5;
+
+// Insert into database using prepared statements
+$stmt = $conn->prepare("INSERT INTO quiz_responses (username, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, event1, event2, event3, event4, survey, score) 
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+$stmt->bind_param("sssssssssssssssss", $username, $q1, $q2, $q3, $q4, $q5, $q6, $q7, $q8, $q9, $q10, $event1, $event2, $event3, $event4, $survey, $score);
+
+if ($stmt->execute()) {
+    echo "Quiz submitted successfully!";
+} else {
+    echo "Error: " . $stmt->error;
+}
+
+$stmt->close();
+$conn->close();
+?>
 <?php 
 $score = 0;
 
