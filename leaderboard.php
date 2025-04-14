@@ -3,17 +3,12 @@ $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "ramayanaquiz";
-
 $conn = new mysqli($servername, $username, $password, $dbname);
-
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-
 $result = $conn->query("SELECT id, username, score, submitted_at FROM quiz_responses ORDER BY score DESC, submitted_at ASC LIMIT 10");
-
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
